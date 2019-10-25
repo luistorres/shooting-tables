@@ -1,7 +1,11 @@
+<script>
+  export let angle;
+</script>
+
 <style>
   table {
-    background: white;
     border-collapse: collapse;
+    animation: blinds rot 2s cubic-bezier(0.68, -0.57, 0.26, 1.65) infinite;
   }
   td,
   th {
@@ -13,9 +17,21 @@
   tr:nth-child(even) {
     background-color: #dddddd;
   }
+
+  @keyframes rot {
+    to {
+      --ang: 1turn;
+    }
+  }
+
+  @keyframes rot-alt {
+    to {
+      background-image: grad();
+    }
+  }
 </style>
 
-<table>
+<table style="background: linear-gradient({angle * 10}deg, #f90 50%, #444 0);">
   <tr>
     <th>Company</th>
     <th>Contact</th>

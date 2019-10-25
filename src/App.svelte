@@ -45,7 +45,6 @@
   }
 </style>
 
-<!-- on:mousemove={e => coords.set({ x: e.clientX, y: e.clientY })} -->
 <div class="main">
   <div class="video">
     <iframe
@@ -61,7 +60,7 @@
     class="tableWrapper"
     style="transform: translate({counter}px, {counter / 2}px)">
     <div class="table" style="transform: rotate({counter * 5}deg)">
-      <Table />
+      <Table angle={counter} />
     </div>
   </div>
 </div>
